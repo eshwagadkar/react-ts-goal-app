@@ -14,7 +14,17 @@ export default function App() {
   const [goals, setGoals] = useState<CourseGoal[]>([])
 
   function handleAddGoal() {
-    setGoals()
+
+    setGoals(prevGoals => {
+
+      const newGoal: CourseGoal = {
+        id: Math.random(),
+        title: 'Learn Typescript with React',
+        description: 'A fundamental from scratch' 
+      }
+
+      return [...prevGoals, newGoal]
+    })
   } 
 
   return <main>
@@ -24,10 +34,15 @@ export default function App() {
 
     <button onClick={handleAddGoal}>Add Goal</button>
    
-   <CourseGoal title='Learning TS + React'
-     //  description='Learn it from the ground up.'
-     >Learn it from the ground up.
-    </CourseGoal>
+    <ul>
+      {goals.map(goal => <li key={goal.id}>
+        <CourseGoal  title={goal.title}
+          //  description='Learn it from the ground up.'
+        >{goal.description}
+        </CourseGoal>
+        </li>
+      )}
+    </ul>
     
   </main>
 }
