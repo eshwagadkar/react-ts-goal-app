@@ -7,7 +7,7 @@ import { type PropsWithChildren,
 //     children: ReactNode
 // }
 
-type CourseGoalProps = PropsWithChildren<{ title: string}>
+type CourseGoalProps = PropsWithChildren<{title: string}>
 
 export default function CourseGoal({title, children}: CourseGoalProps) {
     return <article>
