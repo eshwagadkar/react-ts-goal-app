@@ -4,6 +4,9 @@ export default function App() {
 
   return <main>
    <CourseGoal title='Learning TS + React'
-   description='Learn it from the ground up.' />
+     //  description='Learn it from the ground up.'
+     >Learn it from the ground up.
+    </CourseGoal>
+    
   </main>
 }
