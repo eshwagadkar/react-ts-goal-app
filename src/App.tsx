@@ -3,7 +3,7 @@ import goalsImg from './assets/goals.jpg'
 import Header from './components/Header'
 import CourseGoalList from './components/CourseGoalList'
 
-type CourseGoal = {
+export type CourseGoal = {
   title: string;
   description: string;
   id: number;
